@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pairwise Comparison Test</title>
+</head>
+
+<body>
+
+    <!-- 注意書きなど -->
+    <div style="border:1px solid #000000; padding: 10px; border-radius: 0px; background: ##ffffff;">
+        <p>
+        <h1>Pairwise Comparison Test</h1>
+
+        評価実験へのご協力、感謝します。</br>
+        2つの音声を聴いて、相応しいと思う評価を付けてください。</br>
+        以下、実験の詳細について説明します。
+
+
+        <h2>実験手順</h2>
+        <ol>
+            <li>名前を入力し、1か2のセット番号を選んで下さい。</li>
+            <li>"Start Experiment"を押して下さい。</li>
+            <li>講演や授業などを想定した音声が2種類配置されています。</li>
+            <li>音声をVoice 1 → 2の順に聴き、相応しいと思った評価を選択して下さい。</li>
+            <li>各ページに3つの評価項目があります。</li>
+            <li>全ての選択を終えたら"next"ボタンを押し、次の実験に進んで下さい。</li>
+            <li>評価実験を全て終えたら"finish"ボタンを押して結果をダウンロードして下さい。<br>
+                結果はSlackか下記のメールアドレスに送信して下さい。</li>
+            <li>Emailアドレス: yoshioka.daiki@g.sp.m.is.nagoya-u.ac.jp</font>
+            </li>
+        </ol>
+
+        <h2>注意</h2>
+        <ul>
+            <li>この実験は凡そ15～20分ほど要します。</li>
+            <li>実験中はページの再読み込みは行わないで下さい。</li>
+            <li>スマートフォンでは結果をダウンロードできない場合があるのでPCを使用して下さい。</li>
+            <li>ヘッドホンやイヤホンを着用した状態で行って下さい。</li>
+        </ul>
+        </p>
+    </div>
+
+    <script type="text/javascript" src="mos.js"></script>
+
+    <div id="Display1">
+        <p> Your name: <br>
+            <input type="text" id="name" value="">
+        </p>
+        <p> Setlist number: <br>
+            <label><input type="radio" name="set" id="number" value="1">1</label><br>
+            <label><input type="radio" name="set" id="number" value="2">2</label><br>
+        <p>
+            <button id="next1" onclick="start_experiment()">next</button>
+        </p>
+    </div>
+
+
+    <div id="Display2" style="display:none;">
+        <!-- 注意書きなど <body onload="init()"> -->
+        <p id="page"></p>
+        <p id="audio_spk"></p>
+        <p id="audio_wrt"></p>
+        <p>
+            <li>どちらの方が自然な講演音声でしたか？</li>
+            <label><input type="radio" name="eval1" onclick="evaluation(1)">1の方が良い</label><br>
+            <label><input type="radio" name="eval1" onclick="evaluation(1)">2の方が良い</label><br>
+        </p>
+        <p>
+            <li>説明していた内容について、どちらの音声を聞いている方が分かりやすかったですか？</li>
+            <label><input type="radio" name="eval2" onclick="evaluation(2)">1の方が良い</label><br>
+            <label><input type="radio" name="eval2" onclick="evaluation(2)">2の方が良い</label><br>
+        </p>
+        <p>
+            <li>説明音声として相応しいと感じたのはどちらの音声でしたか？</li>
+            <label><input type="radio" name="eval3" onclick="evaluation(3)">1の方が良い</label><br>
+            <label><input type="radio" name="eval3" onclick="evaluation(3)">2の方が良い</label><br>
+        </p>
+        <p>
+            <button id="prev" onclick="prev()">prev</button>
+            <button id="next2" onclick="next()">next</button>
+            <button id="finish" onclick="finish()">finish</button>
+        </p>
+
+
+</body>
+
+</html>
