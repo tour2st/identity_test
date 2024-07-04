@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Pairwise Comparison Test</title>
+    <title>ABX Test for Disfluency</title>
 </head>
 
 <body>
@@ -12,26 +12,45 @@
     <!-- 注意書きなど -->
     <div style="border:1px solid #000000; padding: 10px; border-radius: 0px; background: ##ffffff;">
         <p>
-        <h1>Pairwise Comparison Test</h1>
+        <h1>ABX Test for Disfluency</h1>
 
         評価実験へのご協力、感謝します。</br>
-        2つの音声を聴いて、相応しいと思う評価を付けてください。</br>
-        以下、実験の詳細について説明します。
+        参照音声を聴いた後に2つの音声を聴いて、相応しいと思う評価を付けてください。</br>
+        以下、実験の詳細と、今回扱う「非流暢性」について説明します。
 
 
         <h2>実験手順</h2>
         <ol>
             <li>名前を入力し、1か2のセット番号を選んで下さい。</li>
             <li>"Start Experiment"を押して下さい。</li>
-            <li>講演や授業などを想定した音声が2種類配置されています。</li>
-            <li>音声をVoice 1 → 2の順に聴き、相応しいと思った評価を選択して下さい。</li>
-            <li>各ページに3つの評価項目があります。</li>
+            <li>非流暢性を含む参照音声が1つと、評価対象の音声が2つ配置されています。</li>
+            <li>全ての音声を聴き、相応しいと思った評価を選択して下さい。</li>
+            <li>各ページには2つの評価項目があります。</li>
             <li>全ての選択を終えたら"next"ボタンを押し、次の実験に進んで下さい。</li>
             <li>評価実験を全て終えたら"finish"ボタンを押して結果をダウンロードして下さい。<br>
                 結果はSlackか下記のメールアドレスに送信して下さい。</li>
             <li>Emailアドレス: yoshioka.daiki@g.sp.m.is.nagoya-u.ac.jp</font>
             </li>
         </ol>
+
+        <h2>非流暢性について</h2>
+        <ul>
+            ここで扱う「非流暢性」とは、健常な母国語話者の発話に含まれる、<br>
+            思考やためらい・言い間違いなどに起因する『発話の乱れ』を指します。<br>
+            代表的な例とサンプル音声を以下に示します。
+            <h3>フィラー</h3>
+            その言葉自体には意味が無い、間を詰めるためのつなぎ文句<br>
+            「あの一」「そのー」「ま」「えー」「えと」「ん」「んと」など
+
+            <h3>言いよどみ</h3>
+            言い間違い、言い直し、つっかえなどによって語句が繰り返されたり中断したりすること<br>
+            「かうゆ通うように」「そわ備わってる」など
+
+            <h3>音韻の引き伸ばし</h3>
+            語句末尾の音韻が伸びること<br>
+            「なんかー」「ですねー」など
+        </ul>
+
 
         <h2>注意</h2>
         <ul>
@@ -61,22 +80,22 @@
     <div id="Display2" style="display:none;">
         <!-- 注意書きなど <body onload="init()"> -->
         <p id="page"></p>
-        <p id="audio_spk"></p>
-        <p id="audio_wrt"></p>
+        <p id="audio_ref"></p>
+        <p id="audio1"></p>
+        <p id="audio2"></p>
         <p>
-            <li>どちらの方が自然な講演音声でしたか？</li>
+            <li>参照音声の「非流暢性」に関する話し方を再現できているのはどちらですか？</li>
             <label><input type="radio" name="eval1" onclick="evaluation(1)">1の方が良い</label><br>
+            <label><input type="radio" name="eval1" onclick="evaluation(1)">どちらかと言えば1の方が良い</label><br>
+            <label><input type="radio" name="eval1" onclick="evaluation(1)">どちらかと言えば2の方が良い</label><br>
             <label><input type="radio" name="eval1" onclick="evaluation(1)">2の方が良い</label><br>
         </p>
         <p>
-            <li>説明していた内容について、どちらの音声を聞いている方が分かりやすかったですか？</li>
+            <li>参照音声に関わらず、より自然だと感じる音声はどちらですか？</li>
             <label><input type="radio" name="eval2" onclick="evaluation(2)">1の方が良い</label><br>
+            <label><input type="radio" name="eval2" onclick="evaluation(2)">どちらかと言えば1の方が良い</label><br>
+            <label><input type="radio" name="eval2" onclick="evaluation(2)">どちらかと言えば2の方が良い</label><br>
             <label><input type="radio" name="eval2" onclick="evaluation(2)">2の方が良い</label><br>
-        </p>
-        <p>
-            <li>説明音声として相応しいと感じたのはどちらの音声でしたか？</li>
-            <label><input type="radio" name="eval3" onclick="evaluation(3)">1の方が良い</label><br>
-            <label><input type="radio" name="eval3" onclick="evaluation(3)">2の方が良い</label><br>
         </p>
         <p>
             <button id="prev" onclick="prev()">prev</button>
