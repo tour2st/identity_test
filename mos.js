@@ -126,7 +126,6 @@ function init() {
     setAudio();
     evalCheck1();
     evalCheck2();
-    evalCheck3();
     setButton();
 }
 function evalCheck1() {
