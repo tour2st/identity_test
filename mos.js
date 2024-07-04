@@ -106,7 +106,7 @@ function setSlide() {
 
 function setAudio() {
     document.getElementById("page").textContent = "" + (n + 1) + "/" + scores1.length;
-    document.getElementById("audio1").innerHTML = 'Reference Voice:<br>'
+    document.getElementById("audio_ref").innerHTML = 'Reference Voice:<br>'
         + '<audio id="audio1" src="' + file_list[n][2]
         + '" controls preload="auto">'
         + '</audio>';
