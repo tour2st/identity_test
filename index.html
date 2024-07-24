@@ -16,14 +16,14 @@
 
         評価実験へのご協力、感謝します。</br>
         参照音声を聴いた後に2つの音声を聴いて、相応しいと思う評価を付けてください。</br>
-        以下、実験の詳細と、今回扱う「非流暢性」について説明します。
+        以下、実験の詳細について説明します。
 
 
         <h2>実験手順</h2>
         <ol>
             <li>名前を入力し、1か2のセット番号を選んで下さい。</li>
             <li>"Start Experiment"を押して下さい。</li>
-            <li>非流暢性を含む参照音声が1つと、評価対象の音声が2つ配置されています。</li>
+            <li>参照音声が1つと、評価対象の音声が2つ配置されています。</li>
             <li>全ての音声を聴き、相応しいと思った評価を選択して下さい。</li>
             <li>各ページには2つの評価項目があります。</li>
             <li>全ての選択を終えたら"next"ボタンを押し、次の実験に進んで下さい。</li>
@@ -32,37 +32,6 @@
             <li>Emailアドレス: yoshioka.daiki@g.sp.m.is.nagoya-u.ac.jp</font>
             </li>
         </ol>
-
-        <h2>非流暢性について</h2>
-        <ul>
-            ここで扱う「非流暢性」とは、健常な母国語話者の発話に含まれる、<br>
-            思考やためらい・言い間違いなどに起因する『発話の乱れ』を指します。<br>
-            代表的な例とサンプル音声を以下に示します。
-            <h3 style="color:rgb(13, 130, 0);">＜フィラー＞</h3>
-            その言葉自体には意味が無い、間を詰めるためのつなぎ文句<br>
-            「あの一」「そのー」「ま」「えー」「えと」「ん」「んと」など
-
-            <h3 style="color:rgb(0, 51, 255);">（言いよどみ）</h3>
-            言い間違い、言い直し、つっかえなどによって語句が繰り返されたり中断したりすること<br>
-            「かうゆ通うように」「そわ備わってる」など
-
-            <h3 style="color:rgb(255, 115, 0);">［音韻の引き伸ばし］</h3>
-            語句末尾の音韻が伸びること<br>
-            「なんかー」「ですねー」など
-
-            <h3>非流暢性を含むサンプル音声</h3>
-            <p><span style="color:rgb(13, 130, 0)">＜えー＞</span>内容としましては</p>
-            <audio src="wav/reference/A01M0097_0000211_0001695.wav" controls preload="auto"></audio>
-            <p>生成過程の<span style="color:rgb(0, 51, 255);">（モドル）</span>モデルに基づくF0パターンの分析...</p>
-            <audio src="wav/reference/A01M0097_0002761_0009322.wav" controls preload="auto"></audio>
-            <p><span style="color:rgb(13, 130, 0)">＜あー＞</span><span
-                    style="color:rgb(0, 51, 255);">（すっ）</span>人口ソナーより優れています
-            </p>
-            <audio src="wav/reference/A01F0001_0082750_0085110.wav" controls preload="auto"></audio>
-            <p>でこのようなエコーロケーション機能<span style="color:rgb(255, 115, 0);">［はー例えばー］</span>船や潜水艦あるいは自動ドアといったところに...</p>
-            <audio src="wav/reference/A01F0001_0057844_0065367.wav" controls preload="auto"></audio>
-
-        </ul>
 
 
         <h2>注意</h2>
@@ -83,7 +52,6 @@
         </p>
         <p> Setlist number: <br>
             <label><input type="radio" name="set" id="number" value="1">1</label><br>
-            <label><input type="radio" name="set" id="number" value="2">2</label><br>
         <p>
             <button id="next1" onclick="start_experiment()">next</button>
         </p>
@@ -97,7 +65,7 @@
         <p id="audio1"></p>
         <p id="audio2"></p>
         <p>
-            <li>参照音声の「非流暢性」に関する話し方を再現できているのはどちらですか？</li>
+            <li>参照音声の話し方をより再現できているのはどちらですか？</li>
             <label><input type="radio" name="eval1" onclick="evaluation(1)">1の方が良い</label><br>
             <label><input type="radio" name="eval1" onclick="evaluation(1)">どちらかと言えば1の方が良い</label><br>
             <label><input type="radio" name="eval1" onclick="evaluation(1)">どちらかと言えば2の方が良い</label><br>
