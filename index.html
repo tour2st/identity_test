@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ABX Test for Lecture Speech</title>
+    <title>ABX Test</title>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <!-- 注意書きなど -->
     <div style="border:1px solid #000000; padding: 10px; border-radius: 0px; background: ##ffffff;">
         <p>
-        <h1>ABX Test for Lecture Speech</h1>
+        <h1>ABX Test</h1>
 
         評価実験へのご協力、感謝します。</br>
         参照音声を聴いた後に2つの音声を聴いて、相応しいと思う評価を付けてください。</br>
@@ -23,13 +23,13 @@
         <ol>
             <li>名前を入力し、1のセット番号を選んで下さい。</li>
             <li>"Start Experiment"を押して下さい。</li>
-            <li>参照音声が1つと、評価対象の講演音声が2つ配置されています。</li>
-            <li>全ての講演音声を聴き、相応しいと思った評価を選択して下さい。</li>
+            <li>参照音声が1つと、話者変換後の音声が2つ配置されています。</li>
+            <li>全ての音声を聴き、相応しいと思った評価を選択して下さい。</li>
             <li>各ページには2つの評価項目があります。</li>
             <li>全ての選択を終えたら"next"ボタンを押し、次の実験に進んで下さい。</li>
             <li>評価実験を全て終えたら"finish"ボタンを押して結果をダウンロードして下さい。<br>
                 結果はSlackか下記のメールアドレスに送信して下さい。</li>
-            <li>Emailアドレス: yoshioka.daiki@g.sp.m.is.nagoya-u.ac.jp</font>
+            <li>Emailアドレス: furuta.kyohei.789@gmail.com</font>
             </li>
         </ol>
 
@@ -42,6 +42,34 @@
             <li>ヘッドホンやイヤホンを着用した状態で行って下さい。</li>
         </ul>
         </p>
+
+        <h1>ABX Test</h1>
+
+        Thank you for your cooperation in this evaluation experiment.</br>
+        Please listen to the reference audio, then listen to the two speaker-converted audio samples and provide your evaluations.</br>
+        Below is a detailed explanation of the experiment.
+        
+        <h2>Experiment Procedure</h2>
+        <ol>
+            <li>Enter your name and select set number 1.</li>
+            <li>Click the "Start Experiment" button.</li>
+            <li>You will be presented with one reference audio and two speaker-converted audio samples.</li>
+            <li>Listen to all audio samples and select the evaluation you find appropriate.</li>
+            <li>Each page has two evaluation items.</li>
+            <li>After selecting your evaluations, click the "next" button to proceed to the next page.</li>
+            <li>When you finish all the evaluations, click the "finish" button to download your results.<br>
+                Please send the result file via Slack or to the email address below.</li>
+            <li>Email address: furuta.kyohei.789@gmail.com</li>
+        </ol>
+        
+        <h2>Notes</h2>
+        <ul>
+            <li>This experiment will take approximately 8–12 minutes to complete.</li>
+            <li>Please do not reload the page during the experiment.</li>
+            <li>Downloading the results may not be possible on smartphones, so please use a PC.</li>
+            <li>Please wear headphones or earphones during the experiment.</li>
+        </ul>
+        
     </div>
 
     <script type="text/javascript" src="mos.js"></script>
@@ -65,18 +93,18 @@
         <p id="audio1"></p>
         <p id="audio2"></p>
         <p>
-            <li>参照音声の話し方をより再現できているのはどちらですか？</li>
-            <label><input type="radio" name="eval1" onclick="evaluation(1)">1の方が良い</label><br>
-            <label><input type="radio" name="eval1" onclick="evaluation(1)">どちらかと言えば1の方が良い</label><br>
-            <label><input type="radio" name="eval1" onclick="evaluation(1)">どちらかと言えば2の方が良い</label><br>
-            <label><input type="radio" name="eval1" onclick="evaluation(1)">2の方が良い</label><br>
+            <li>参照音声の声をより再現できているのはどちらですか？/Which audio sample better reproduces the reference speaker's voice?</li>
+            <label><input type="radio" name="eval1" onclick="evaluation(1)">1の方が良い/Audio 1 is better</label><br>
+            <label><input type="radio" name="eval1" onclick="evaluation(1)">どちらかと言えば1の方が良い/Slightly prefer Audio 1</label><br>
+            <label><input type="radio" name="eval1" onclick="evaluation(1)">どちらかと言えば2の方が良い/Slightly prefer Audio 2</label><br>
+            <label><input type="radio" name="eval1" onclick="evaluation(1)">2の方が良い/Audio 2 is better</label><br>
         </p>
         <p>
-            <li>参照音声に関わらず、より自然だと感じる音声はどちらですか？</li>
-            <label><input type="radio" name="eval2" onclick="evaluation(2)">1の方が良い</label><br>
-            <label><input type="radio" name="eval2" onclick="evaluation(2)">どちらかと言えば1の方が良い</label><br>
-            <label><input type="radio" name="eval2" onclick="evaluation(2)">どちらかと言えば2の方が良い</label><br>
-            <label><input type="radio" name="eval2" onclick="evaluation(2)">2の方が良い</label><br>
+            <li>参照音声に関わらず、より自然だと感じる音声はどちらですか？/Which audio sample sounds more natural overall, regardless of the reference speaker?</li>
+            <label><input type="radio" name="eval2" onclick="evaluation(2)">1の方が良い/Audio 1 is better</label><br>
+            <label><input type="radio" name="eval2" onclick="evaluation(2)">どちらかと言えば1の方が良い/Slightly prefer Audio 1</label><br>
+            <label><input type="radio" name="eval2" onclick="evaluation(2)">どちらかと言えば2の方が良い/Slightly prefer Audio 2</label><br>
+            <label><input type="radio" name="eval2" onclick="evaluation(2)">2の方が良い/Audio 2 is better</label><br>
         </p>
         <p>
             <button id="prev" onclick="prev()">prev</button>
