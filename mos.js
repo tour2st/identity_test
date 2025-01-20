@@ -82,7 +82,6 @@ function loadText(filename) {
     xhr.open("GET", filename, false);
     xhr.send(null);
     var list = xhr.responseText.split(/\r\n|\r|\n/);
-    list.pop();
 
     return list;
 }
